@@ -1,0 +1,313 @@
+html {
+  scroll-behavior: smooth;
+  overflow-x:hidden
+}
+body {
+  box-sizing: border-box;
+  margin: 0;
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif; */
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.inputAnim label {
+  color: white;
+}
+
+/*******************************
+* MODAL AS LEFT/RIGHT SIDEBAR
+* Add "left" or "right" in modal parent div, after class="modal".
+* Get free snippets on bootpen.com
+*******************************/
+.modal.right .modal-dialog {
+  position: fixed;
+  margin: auto;
+  width: 50vw;
+  height: 100%;
+  transform: translate3d(0%, 0, 0);
+}
+
+.modal.right .modal-content {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.modal.right .modal-body {
+  padding: 15px 15px 80px;
+}
+      
+/*Right*/
+.modal.right.fade .modal-dialog {
+  right: -50vw;
+  transition: opacity 0.3s linear, right 0.3s ease-out;
+}
+
+.modal.right.fade.show .modal-dialog {
+  right: 0;
+  max-width:50vw;
+}
+
+/* ----- MODAL STYLE ----- */
+.modal-content {
+  border-radius: 0;
+  border: none;
+}
+
+.modal-header {
+  border-bottom-color: #EEEEEE;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.df {
+  list-style-type: disc;
+}
+a.btn-outline-info {
+  text-align: center;
+  margin: auto;
+  background: linear-gradient(
+    to right,
+    rgb(54, 162, 235) 50%,
+    rgb(48, 51, 44, 1) 50%
+  );
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.2s ease-out;
+}
+a.btn-outline-info:hover {
+  color: rgb(48, 51, 44, 1) !important;
+  font-weight: 700;
+  background-position: left bottom;
+  background-color: rgb(0, 0, 0,1);
+}
+a.text-warning {
+  background: linear-gradient(
+    to right,
+    rgb(237, 252, 36) 50%,
+    rgb(48, 51, 44, 1) 50%
+  );
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.2s ease-out;
+}
+a.text-warning:hover {
+  color:rgb(48, 51, 44, 1) !important;
+  font-weight: 700;
+  background-position: left bottom;
+  background-color: rgb(0, 0, 0, 0);
+}
+#projectCard::after {
+  visibility: hidden;
+}
+#projectCard {
+  display: inline-block;
+  position: relative;
+  background-color: rgb(48, 51, 44, 0.3);
+  /* transition: all 200ms ease-in-out;
+  transform:scale(1) */
+}
+#lastProjects {
+  height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://thomas-g.herokuapp.com/img/lastProjects-desktop.jpg");
+}
+#CVParallax {
+  height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://thomas-g.herokuapp.com/img/CVPrallaxImg.jpg");
+}
+#CVfr {
+  height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: linear-gradient(
+    180deg,
+    rgba(63, 57, 172, 1) 3%,
+    rgba(63, 81, 181, 1) 50%,
+    rgba(85, 105, 210, 1) 100%
+  );
+}
+.bg-gradient {
+  background: linear-gradient(
+    180deg,
+    rgba(63, 57, 172, 1) 3%,
+    rgba(63, 81, 181, 1) 50%,
+    rgba(85, 105, 210, 1) 100%
+  );
+}
+#homeHeader h1 {
+  font-size: 4em;
+}
+#homeHeader p {
+  font-size: 3em;
+}
+@media screen and (max-width: 420px) {
+  #homeHeader h1 {
+    font-size: 3em;
+  }
+  #homeHeader p {
+    font-size: 2em;
+  }
+}
+.slide-anim {
+  -webkit-animation: slide-up-fade-in ease 1s;
+  animation: slide-up-fade-in ease 1s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  transform-origin: 50% 50%;
+}
+@-webkit-keyframes slide-up-fade-in {
+  0% {
+    opacity: 0;
+    transform: translate(0px, 40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes slide-up-fade-in {
+  0% {
+    opacity: 0;
+    transform: translate(0px, 40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  
+  .poster-when-mobile-device-bg {
+    background: url("https://thomas-g.herokuapp.com/img/video-poster.jpg");
+    background-size: cover;
+  }
+  /* .collapse.show{
+    background-color:rgb(0,0,0,0.9)!important;
+  } */
+  .navbar-brand h1 {
+    font-size: 1.3em;
+  }
+}
+@media screen and (min-width: 960px) {
+/*   #projectCard:hover {
+  background-color: rgb(255, 255, 255, 0.1);
+  transition: 200ms ease-in-out;
+  transform: scale(1.1);
+   border: 2px solid rgb(63, 57, 172) !important; 
+} */
+  #contact-form-to-hide-in-lg {
+    visibility: hidden;
+  }
+  #CVParallax {
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("https://thomas-g.herokuapp.com/img/CVPrallaxImg.jpg");
+  }
+  .inputAnim {
+    width: 100%;
+    border:none;
+    border-bottom: 2px solid#343a40;
+    outline: none;
+    background-color:rgb(0,0,0,0);
+    border-radius: 0px;
+    font-size: 20px;
+    transition: border 0.2s ease-out;
+  }
+
+  .inputEmail label {
+    font-size: 20px;
+    position: absolute;
+    color: rgb(255,255,255,0.8);
+    top: 95px;
+    transform: translateY(-50%);
+    padding-left: 8px;
+    transition: all 0.3s ease-out;
+  }
+
+  .inputEmail {
+    margin-top: 30px;
+  }
+
+  .inputEmail:focus-within label,
+  .inputEmail.active-input label {
+    top: 65px;
+    color: white;
+    font-size: 22px;
+    padding-left: 2px;
+  }
+
+  .inputSubject label {
+    font-size: 20px;
+    position: absolute;
+    color: rgb(255,255,255,0.8);
+    top: 159px;
+    transform: translateY(-50%);
+    padding-left: 8px;
+    transition: all 0.3s ease-out;
+  }
+
+  .inputSubject {
+    margin-top: 30px;
+  }
+
+  .inputSubject:focus-within label,
+  .inputSubject.active-input label {
+    top: 130px;
+    color: white;
+    font-size: 22px;
+    padding-left: 2px;
+  }
+
+  .inputMessage label {
+    font-size: 20px;
+    position: absolute;
+    color: rgb(255,255,255,0.8);
+    top: 220px;
+    transform: translateY(-50%);
+    padding-left: 8px;
+    transition: all 0.3s ease;
+  }
+
+  .inputMessage {
+    margin-top: 30px;
+  }
+
+  .inputMessage:focus-within label,
+  .inputMessage.active-input label {
+    top: 195px;
+    color: white;
+    font-size: 22px;
+    padding-left: 2px;
+  }
+}
+
+/* @media (max-aspect-ratio: 16/9) {
+  video { 
+      width:auto;
+      height: 100%;
+  }
+}
+ */

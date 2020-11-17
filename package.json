@@ -1,0 +1,70 @@
+{
+  "name": "client-v2",
+  "version": "0.1.0",
+  "engines": {
+    "node": "12.x"
+  },
+  "private": true,
+  "dependencies": {
+    "@apollo/client": "^3.2.5",
+    "@apollo/react-hooks": "^4.0.0",
+    "@testing-library/jest-dom": "^5.11.5",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "apollo-boost": "^0.4.9",
+    "apollo-link": "^1.2.14",
+    "apollo-link-context": "^1.0.20",
+    "apollo-link-ws": "^1.0.20",
+    "apollo-utilities": "^1.3.4",
+    "axios": "^0.21.0",
+    "compression": "^1.7.4",
+    "cross-fetch": "^3.0.6",
+    "css-loader": "^5.0.0",
+    "firebase": "^7.24.0",
+    "framer-motion": "^2.9.4",
+    "graphql": "^15.4.0",
+    "node-sass": "^4.14.1",
+    "omit-deep": "^0.3.0",
+    "path": "^0.12.7",
+    "react": "^17.0.1",
+    "react-animate-on-scroll": "^2.1.5",
+    "react-dom": "^17.0.1",
+    "react-image-file-resizer": "^0.3.8",
+    "react-intersection-observer": "^8.29.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.0",
+    "react-toastify": "^6.0.9",
+    "subscriptions-transport-ws": "^0.9.18",
+    "swiper": "^6.3.4",
+    "web-vitals": "^0.2.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --coverage",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.5",
+    "jest-localstorage-mock": "^2.4.3"
+  }
+}
