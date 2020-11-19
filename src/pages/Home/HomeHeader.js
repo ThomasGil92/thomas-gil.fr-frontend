@@ -22,24 +22,6 @@ const HomeHeader = ({ language }) => {
                         >
                             React / Node
                             </motion.p>
-                        {window.innerWidth > 960 && (
-                            <motion.a
-                                initial={{ y: 500, opacity: 0 }}
-                                animate={{ y: 60, opacity: 1 }}
-                                transition={{ delay: 2, duration: 0.5, stiffness: 500, damping: 25, type: "spring" }}
-                                className="btn btn-outline-light rounded-pill"
-                                href="/#presentation"
-                                style={{ height: "120px" }}
-                            >
-
-                                <motion.p animate={{ y: 55 }} transition={{ duration: 1.5, delay: 1, loop: Infinity }} >
-                                    <i className="fas fa-angle-double-down"></i>
-                                </motion.p>
-
-
-
-                            </motion.a>
-                        )}
                     </div>
                 )}
                 {language === "en" && (
@@ -56,22 +38,6 @@ const HomeHeader = ({ language }) => {
                             transition={{ duration: 0.4, delay: 1.2 }}
                             className="lead"
                         >React / Node</motion.p>
-                        {window.innerWidth > 960 && (
-                            <motion.div
-                                initial={{ y: 500, opacity: 0 }}
-                                animate={{ y: 60, opacity: 1 }}
-                                transition={{ delay: 2, duration: 0.5, stiffness: 500, damping: 25, type: "spring" }}
-                                className="btn btn-outline-light rounded-pill"
-                                href="/#presentation"
-                                style={{ height: "120px" }}
-                            >
-
-                                <motion.p animate={{ y: 55 }} transition={{ duration: 1.5, delay: 1, loop: Infinity }} >
-                                    <i className="fas fa-angle-double-down"></i>
-                                </motion.p>
-
-                            </motion.div>
-                        )}
                     </div>
                 )}
             </header>

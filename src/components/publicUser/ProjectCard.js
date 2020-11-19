@@ -20,7 +20,6 @@ const ProjectCard = ({ site }) => {
         <Fragment>
 
             <motion.div
-                whileHover={{ scale: 1.2, backgroundColor: "rgb(255, 255, 255, 0.1)" }}
                 onMouseEnter={() => setMoreInfo(true)}
                 onMouseLeave={() => setMoreInfo(false)}
                 id="projectCard"
@@ -30,7 +29,8 @@ const ProjectCard = ({ site }) => {
 
                 <div>
 
-                    <img
+                    <motion.img
+                    whileHover={{backgroundSize:"100px"}}
                         style={{
                             height: "300px"
                         }}
