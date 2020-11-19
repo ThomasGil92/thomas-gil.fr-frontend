@@ -7,7 +7,7 @@ import { AuthProvider } from './context/authContext'
 import { BrowserRouter, useLocation, withRouter } from 'react-router-dom'
 
 function _ScrollToTop(props) {
-  const { pathname } = useLocation();
+  const { pathname } = useLocation()
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
