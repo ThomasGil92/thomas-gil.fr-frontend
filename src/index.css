@@ -113,11 +113,10 @@ a.text-warning:hover {
   height: 100%;
 
   /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("https://thomas-g.herokuapp.com/img/lastProjects-desktop.jpg");
+  background-attachment: fixed!important;
+  background-position: center!important;
+  background-repeat: no-repeat!important;
+  background-size: cover!important;
 }
 #CVParallax {
   height: 100%;
@@ -193,6 +192,11 @@ a.text-warning:hover {
   }
 }
 
+@media screen and (max-width: 720px) {
+  .justify{
+    text-align: justify;
+  text-justify: inter-word;
+  }
 @media screen and (max-width: 576px) {
   
   .poster-when-mobile-device-bg {
@@ -311,3 +315,4 @@ a.text-warning:hover {
   }
 }
  */
+}

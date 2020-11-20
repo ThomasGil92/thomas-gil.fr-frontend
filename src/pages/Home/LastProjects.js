@@ -30,16 +30,12 @@ const LastProjects = ({ language }) => {
 
     return (
         <Fragment>
-            <div id="lastProjects">
-                <div className="p-3 p-md-5 text-white text-center">
-                    {language === "fr" && (
+            <div id="lastProjects" style={{backgroundImage: "url(https://www.thomas-gil.fr/img/paral-big.jpg)"}}>
+
+                {window.innerWidth > 960 && (<>
+                    <div className="p-3 text-white text-center">
                         <h1>Mes derniers projets</h1>
-                    )}
-                    {language === "en" && (
-                        <h1>My Last Projects</h1>
-                    )}
-                </div>
-                {window.innerWidth > 960 && (
+                    </div>
                     <div className=" d-lg-block p-0 pb-3 p-lg-5">
                         <div className="row px-0 mx-0 d-flex justify-content-center">
                             {loading ? <h4 className="text-light">Loading...</h4> : (
@@ -67,6 +63,7 @@ const LastProjects = ({ language }) => {
 
                         </div>
                     </div>
+                </>
                 )}
                 {window.innerWidth < 960 && (
                     <div className=" d-lg-block p-0 pb-md-3 p-lg-5">

@@ -70,6 +70,7 @@ const HomeIntro = ({ language }) => {
             {/*  Video by <a href="https://pixabay.com/fr/users/coverr-free-footage-1281706/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=10822">Coverr-Free-Footage</a> from <a href="https://pixabay.com/fr/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=10822">Pixabay</a>*/}
             {/* <a href='https://fr.freepik.com/vecteurs/lumiere'>Lumière vecteur créé par starline - fr.freepik.com</a> */}
             {/* <a href='https://fr.freepik.com/photos/fond'>Fond photo créé par Racool_studio - fr.freepik.com</a> */}
+            {/* <a href='https://fr.freepik.com/vecteurs/fond'>Fond vecteur créé par starline - fr.freepik.com</a> */}
         </Fragment>
     )
 }

@@ -8,37 +8,11 @@ const PublicNav = ({ language, setLanguage }) => {
     const location = window.location.href
 
     const handleScroll = () => {
-
-        if (window.location.href.includes(process.env.REACT_APP_FRONTEND_CV)) {
-            if (window.innerWidth > 576) {
-                if (window.scrollY > 0) {
-                    setHomeNavBgColor("rgb(0,0,0,0.9)")
-                }
-                if (window.scrollY === 0) {
-                    setHomeNavBgColor("rgb(0,0,0,0)")
-                }
-            }
+        if (window.scrollY > 0) {
+            setHomeNavBgColor("rgb(0,0,0,0.9)")
         }
-        if (window.location.href.includes(process.env.REACT_APP_FRONTEND_HOME) && !window.location.href.includes(process.env.REACT_APP_FRONTEND_CV)) {
-
-            const presentation = document.getElementById("presentation")
-            const scrollBg = document.getElementById("lastProjects")
-            //console.log(scrollBg.offsetTop)
-            if (window.innerWidth > 576) {
-
-                if (window.scrollY < window.innerHeight) {
-                    setHomeNavBgColor("rgb(0,0,0,0)")
-                }
-                if (window.scrollY > presentation.offsetTop && window.scrollY < scrollBg.offsetTop) {
-                    setHomeNavBgColor("rgb(0,0,0,0.9)")
-                }
-
-                /* if (window.scrollY > scrollBg.offsetTop) {
-                    setHomeNavBgColor("white")
-                } */
-
-            }
-
+        if (window.scrollY === 0) {
+            setHomeNavBgColor("rgb(0,0,0,0)")
         }
     }
 
@@ -85,7 +59,7 @@ const PublicNav = ({ language, setLanguage }) => {
                 }}
             >
                 <Link className="navbar-brand px-0" to={"/"}>
-                    <motion.h1 animate={{ scale: 1.1}} transition={{ duration: 0.2}} whileHover={{scale:1.5}} whileTap={{scale:1.1}} className="m-0">Thomas Gil</motion.h1>{/* <span className=" text-monospace">Développeur Web React et Node</span> */}
+                    <motion.h1 animate={{ scale: 1.1 }} transition={{ duration: 0.2 }} whileHover={{ scale: 1.5 }} whileTap={{ scale: 1.1 }} className="m-0">Thomas Gil</motion.h1>{/* <span className=" text-monospace">Développeur Web React et Node</span> */}
                     {/* <img
                         width="50px"
                         src="./img/Groupe_1.png"
@@ -102,28 +76,23 @@ const PublicNav = ({ language, setLanguage }) => {
                             <motion.a
                                 whileHover={{ scale: 1.1 }}
                                 whileTap={{ scale: 0.9 }}
-                                className="btn rounded-pill btn-outline-light px-0 p-lg-2"  /* style={isActive(history, "/")} */
+                                className="btn text-white px-0 p-lg-2"  /* style={isActive(history, "/")} */
                                 href={location.includes("bottom") ? `${location}` : `${location}#bottom`}
                             >
-                                <h5 className="mb-0 px-2">
-                                    Contact  <i className="far fa-hand-spock"></i>
-                                </h5>
+                                Contact  <i className="far fa-hand-spock"></i>
                             </motion.a>
                         </li>
-                        <li className="nav-item my-0 mb-2 my-lg-1 mr-lg-2 mx-auto" >
+                        <li className="nav-item my-0 mb-2 my-lg-1 mr-lg-3 mx-auto" >
                             <motion.a
                                 whileHover={{ scale: 1.1 }}
                                 whileTap={{ scale: 0.9 }}
-                                className="btn rounded-pill btn-outline-light px-0 p-md-2"  /* style={isActive(history, "/")} */ href="/CV">
+                                className="btn text-white px-0 p-md-2"  /* style={isActive(history, "/")} */ href="/CV">
                                 {language === "fr" && (
-                                    <h5 className="mb-0 px-2 px-md-0">
-                                        Espace recruteurs  <i className="far fa-file-alt"></i>
-                                    </h5>
+                                    <span>Espace recruteurs  <i className="far fa-file-alt"></i></span>
                                 )}
                                 {language === "en" && (
-                                    <h5 className="mb-0 px-2 px-md-0">
-                                        Recruiters Area  <i className="far fa-file-alt"></i>
-                                    </h5>
+
+                                    <span>Recruiters Area  <i className="far fa-file-alt"></i></span>
                                 )}
 
                             </motion.a>
