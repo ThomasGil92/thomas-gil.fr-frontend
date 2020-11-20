@@ -1,4 +1,4 @@
-import React,{Fragment} from 'react'
+import React from 'react'
 
 const CVtoShare=()=>{
     return(
@@ -221,6 +221,17 @@ const CVtoShare=()=>{
                         </div>
                         <div className="col-12">
                             <h1 className="text-center py-md-4 mt-md-3 w-100 bg-dark text-light rounded">Formations</h1>
+                            <div className="text-justify bg-light rounded py-4 px-4 mb-3 mt-md-3 border">
+                                <h4>novembre 2020</h4>
+                                <h5>Next.js et AWS</h5>
+                                <ul className="list-group bg-light">Compétences aquises:
+                                     <li className="list-group-item border-0 py-1 bg-light">-Créer un site fullstack React multi-pages avec Node.js, Express.js, MongoDB et GraphQL.</li>
+                                    <li className="list-group-item border-0 py-1 bg-light">-Créer un serveur Apollo.</li>
+                                    <li className="list-group-item border-0 py-1 bg-light">-Enregistrer et authentifier les utilisateurs avec Firebase.</li>
+                                    <li className="list-group-item border-0 py-1 bg-light">-Upload d'images avec Cloudinary.</li>
+                                    <li className="list-group-item border-0 py-1 bg-light">-Gestion du state avec Context.</li>
+                                </ul>
+                            </div>
                             <div className="text-justify bg-light rounded py-4 px-4 mb-3 mt-md-3 border">
                                 <h4>Septembre 2020</h4>
                                 <h5>Formation au développement fullstack avec GraphQl sur "Udemy".</h5>
