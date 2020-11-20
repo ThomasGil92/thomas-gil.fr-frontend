@@ -30,11 +30,15 @@ const LastProjects = ({ language }) => {
 
     return (
         <Fragment>
-            <div id="lastProjects" style={{backgroundImage: "url(https://www.thomas-gil.fr/img/paral-big.jpg)"}}>
+            <div id="lastProjects" style={{ backgroundImage: "url(https://www.thomas-gil.fr/img/paral-big.jpg)" }}>
 
                 {window.innerWidth > 960 && (<>
-                    <div className="p-3 text-white text-center">
-                        <h1>Mes derniers projets</h1>
+                    <div className="p-3 pt-md-5 text-white text-center">
+                        <h1 className="mt-5">Mes derniers projets</h1>
+                        <div
+                            className="mx-auto bg-secondary"
+                            style={{ height: "3px", width: "100px" }}
+                        ></div>
                     </div>
                     <div className=" d-lg-block p-0 pb-3 p-lg-5">
                         <div className="row px-0 mx-0 d-flex justify-content-center">

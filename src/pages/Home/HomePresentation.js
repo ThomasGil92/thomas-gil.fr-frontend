@@ -9,7 +9,7 @@ const HomePresentation = ({ language }) => {
         threshold: 0,
         rootMargin:
             window.innerWidth > 960
-                ? "0px 2500px 0px 2500px"
+                ? "250px 2500px 250px 2500px"
                 : "700px 2500px 700px 2500px",
     });
 

@@ -1,6 +1,6 @@
 html {
   scroll-behavior: smooth;
-  overflow-x:hidden
+  overflow-x: hidden;
 }
 body {
   box-sizing: border-box;
@@ -15,7 +15,83 @@ body {
 .inputAnim label {
   color: white;
 }
+/**FOOTER**/
+.inputAnim {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid#343a40;
+  outline: none;
+  background-color: rgb(0, 0, 0, 0);
+  border-radius: 0px;
+  font-size: 20px;
+  transition: border 0.2s ease-out;
+}
 
+.inputEmail label {
+  font-size: 20px;
+  position: absolute;
+  color: rgb(255, 255, 255, 0.8);
+  top: 95px;
+  transform: translateY(-50%);
+  padding-left: 8px;
+  transition: all 0.3s ease-out;
+}
+
+.inputEmail {
+  margin-top: 30px !important;
+}
+
+.inputEmail:focus-within label,
+.inputEmail.active-input label {
+  top: 65px;
+  color: white;
+  font-size: 22px;
+  padding-left: 2px;
+}
+
+.inputSubject label {
+  font-size: 20px;
+  position: absolute;
+  color: rgb(255, 255, 255, 0.8);
+  top: 159px;
+  transform: translateY(-50%);
+  padding-left: 8px;
+  transition: all 0.3s ease-out;
+}
+
+.inputSubject {
+  margin-top: 30px;
+}
+
+.inputSubject:focus-within label,
+.inputSubject.active-input label {
+  top: 130px;
+  color: white;
+  font-size: 22px;
+  padding-left: 2px;
+}
+
+.inputMessage label {
+  font-size: 20px;
+  position: absolute;
+  color: rgb(255, 255, 255, 0.8);
+  top: 220px;
+  transform: translateY(-50%);
+  padding-left: 8px;
+  transition: all 0.3s ease;
+}
+
+.inputMessage {
+  margin-top: 30px;
+}
+
+.inputMessage:focus-within label,
+.inputMessage.active-input label {
+  top: 195px;
+  color: white;
+  font-size: 22px;
+  padding-left: 2px;
+}
 /*******************************
 * MODAL AS LEFT/RIGHT SIDEBAR
 * Add "left" or "right" in modal parent div, after class="modal".
@@ -37,7 +113,7 @@ body {
 .modal.right .modal-body {
   padding: 15px 15px 80px;
 }
-      
+
 /*Right*/
 .modal.right.fade .modal-dialog {
   right: -50vw;
@@ -46,7 +122,7 @@ body {
 
 .modal.right.fade.show .modal-dialog {
   right: 0;
-  max-width:50vw;
+  max-width: 50vw;
 }
 
 /* ----- MODAL STYLE ----- */
@@ -56,7 +132,7 @@ body {
 }
 
 .modal-header {
-  border-bottom-color: #EEEEEE;
+  border-bottom-color: #eeeeee;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -81,7 +157,7 @@ a.btn-outline-info:hover {
   color: rgb(48, 51, 44, 1) !important;
   font-weight: 700;
   background-position: left bottom;
-  background-color: rgb(0, 0, 0,1);
+  background-color: rgb(0, 0, 0, 1);
 }
 a.text-warning {
   background: linear-gradient(
@@ -94,7 +170,7 @@ a.text-warning {
   transition: all 0.2s ease-out;
 }
 a.text-warning:hover {
-  color:rgb(48, 51, 44, 1) !important;
+  color: rgb(48, 51, 44, 1) !important;
   font-weight: 700;
   background-position: left bottom;
   background-color: rgb(0, 0, 0, 0);
@@ -113,10 +189,10 @@ a.text-warning:hover {
   height: 100%;
 
   /* Create the parallax scrolling effect */
-  background-attachment: fixed!important;
-  background-position: center!important;
-  background-repeat: no-repeat!important;
-  background-size: cover!important;
+  background-attachment: fixed !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
 }
 #CVParallax {
   height: 100%;
@@ -193,126 +269,35 @@ a.text-warning:hover {
 }
 
 @media screen and (max-width: 720px) {
-  .justify{
+  .justify {
     text-align: justify;
-  text-justify: inter-word;
+    text-justify: inter-word;
   }
-@media screen and (max-width: 576px) {
-  
-  .poster-when-mobile-device-bg {
-    background: url("https://thomas-g.herokuapp.com/img/video-poster.jpg");
-    background-size: cover;
-  }
-  /* .collapse.show{
+  @media screen and (max-width: 576px) {
+    .poster-when-mobile-device-bg {
+      background: url("https://thomas-g.herokuapp.com/img/video-poster.jpg");
+      background-size: cover;
+    }
+    /* .collapse.show{
     background-color:rgb(0,0,0,0.9)!important;
   } */
-  .navbar-brand h1 {
-    font-size: 1.3em;
+    .navbar-brand h1 {
+      font-size: 1.3em;
+    }
   }
-}
-@media screen and (min-width: 960px) {
-/*   #projectCard:hover {
-  background-color: rgb(255, 255, 255, 0.1);
-  transition: 200ms ease-in-out;
-  transform: scale(1.1);
-   border: 2px solid rgb(63, 57, 172) !important; 
-} */
-  #contact-form-to-hide-in-lg {
-    visibility: hidden;
-  }
-  #CVParallax {
-    height: 100%;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url("https://thomas-g.herokuapp.com/img/CVPrallaxImg.jpg");
-  }
-  .inputAnim {
-    width: 100%;
-    border:none;
-    border-bottom: 2px solid#343a40;
-    outline: none;
-    background-color:rgb(0,0,0,0);
-    border-radius: 0px;
-    font-size: 20px;
-    transition: border 0.2s ease-out;
-  }
-
-  .inputEmail label {
-    font-size: 20px;
-    position: absolute;
-    color: rgb(255,255,255,0.8);
-    top: 95px;
-    transform: translateY(-50%);
-    padding-left: 8px;
-    transition: all 0.3s ease-out;
-  }
-
-  .inputEmail {
-    margin-top: 30px;
-  }
-
-  .inputEmail:focus-within label,
-  .inputEmail.active-input label {
-    top: 65px;
-    color: white;
-    font-size: 22px;
-    padding-left: 2px;
-  }
-
-  .inputSubject label {
-    font-size: 20px;
-    position: absolute;
-    color: rgb(255,255,255,0.8);
-    top: 159px;
-    transform: translateY(-50%);
-    padding-left: 8px;
-    transition: all 0.3s ease-out;
-  }
-
-  .inputSubject {
-    margin-top: 30px;
-  }
-
-  .inputSubject:focus-within label,
-  .inputSubject.active-input label {
-    top: 130px;
-    color: white;
-    font-size: 22px;
-    padding-left: 2px;
-  }
-
-  .inputMessage label {
-    font-size: 20px;
-    position: absolute;
-    color: rgb(255,255,255,0.8);
-    top: 220px;
-    transform: translateY(-50%);
-    padding-left: 8px;
-    transition: all 0.3s ease;
-  }
-
-  .inputMessage {
-    margin-top: 30px;
-  }
-
-  .inputMessage:focus-within label,
-  .inputMessage.active-input label {
-    top: 195px;
-    color: white;
-    font-size: 22px;
-    padding-left: 2px;
-  }
-}
-
-/* @media (max-aspect-ratio: 16/9) {
-  video { 
-      width:auto;
+  @media screen and (min-width: 960px) {
+    #contact-form-to-hide-in-lg {
+      visibility: hidden;
+    }
+    #CVParallax {
       height: 100%;
+
+      /* Create the parallax scrolling effect */
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url("https://thomas-g.herokuapp.com/img/CVPrallaxImg.jpg");
+    }
   }
-}
- */
 }

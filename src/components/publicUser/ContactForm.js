@@ -68,14 +68,14 @@ const ContactForm = ({language}) => {
                 className="contact-form"
                 onSubmit={sendEmail}
             >
-                <div className=" inputEmail">
+                <div className="inputEmail">
                 
                 <label htmlFor="emailContactForm" className="lead">
                     {language==="fr" && ("Votre Adresse Email:")}
                 {language==="en" && ("Your email address:")}
                 </label>
                     <input
-                        className="inputAnim w-100 active text-md-light"
+                        className="inputAnim w-100 active text-white"
                         type="email"
                         name="email"
                         value={email}
@@ -93,7 +93,7 @@ const ContactForm = ({language}) => {
                 <label htmlFor="subject-contact-form" className="lead">Subject:</label>
                 )}
                     <input
-                        className="inputAnim w-100 active text-md-light"
+                        className="inputAnim w-100 active text-white"
                         type="text"
                         name="subject"
                         value={subject}
@@ -111,7 +111,7 @@ const ContactForm = ({language}) => {
                 <label htmlFor="message-contact-form" className="lead">Your message:</label>
                 )}
                     <textarea
-                        className="inputAnim w-100 active text-md-light"
+                        className="inputAnim w-100 active text-white"
                         type="text"
                         name="message"
                         value={message}

@@ -6,8 +6,8 @@ const Footer = ({ language }) => {
     const footerLink = (fa, link) => {
         return (
             <motion.a
-            transition={{duration:0.2}}
-                whileHover={{ scale: 1.5, rotate: 360,backgroundColor:"rgb(0,0,0,0)",color:"#ffc107",borderColor:"#ffc107" }}
+            transition={{duration:0.3}}
+                whileHover={{ scale: 1.5, rotate: 360,backgroundColor:"rgb(0,0,0,0)",color:"#9DDBAD",borderColor:"#9DDBAD" }}
                 target="_blank"
                 rel="noreferrer noopener"
                 className="btn btn-outline-light rounded-circle m-2 p-3"
@@ -25,7 +25,7 @@ const Footer = ({ language }) => {
             id="bottom"
             className="row text-center mx-0 py-3 d-flex justify-content-between align-item-center"
             style={{
-                background: " linear-gradient(180deg, rgba(63, 57, 172, 1) 3%,rgba(63, 81, 181, 1) 50%, rgba(85, 105, 210, 1) 100%)"
+                background: "#32373C"
             }}>
             {window.innerWidth < 960 && (
                 <div className="col-12 col-md-6 text-left p-3 px-md-5 py-md-0 d-block d-md-none">
