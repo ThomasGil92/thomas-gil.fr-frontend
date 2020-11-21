@@ -16,7 +16,7 @@ SwiperCore.use([Navigation, Pagination]);
 const LastProjects = ({ language }) => {
     const controls = useAnimation();
     const [ref, inView] = useInView({
-        rootMargin: "800px 0px 800px 0px",
+        rootMargin: "500px 0px 500px 0px",
         threshold: 0
     });
 

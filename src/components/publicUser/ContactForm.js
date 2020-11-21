@@ -58,12 +58,7 @@ const ContactForm = ({language}) => {
 
     return (
         <Fragment>
-            {language==="fr" && (
                 <h1 className="text-white">M'envoyer un Email</h1>
-            )}
-            {language==="en" && (
-                <h1 className="text-white">Send me an Email</h1>
-            )}
             <form
                 className="contact-form"
                 onSubmit={sendEmail}

@@ -44,7 +44,7 @@ const HomePresentation = ({ language }) => {
                 </div>
 
                 <img
-                    className="mt-5"
+                    className="mt-3"
                     width="100px"
                     src="./img/48.png"
                     alt="logo front-end"
@@ -145,7 +145,7 @@ const HomePresentation = ({ language }) => {
                     </div>
                 </div>
                 <img
-                    className="mt-5"
+                    className="mt-3"
                     width="100px"
                     src="./img/47.png"
                     alt="logo back-end"

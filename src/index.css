@@ -18,13 +18,17 @@ body {
   transform:scale(1.1)!important;
   font-weight: bold!important;
 }
-
+input,textarea{
+  cursor:text;
+}
 /**FOOTER**/
 .inputAnim label {
   color: white;
 }
 .inputAnim {
   width: 100%;
+  margin-left:50px;
+  margin-right:50px;
   border: none;
   border-bottom: 2px solid white;
   outline: none;
@@ -38,19 +42,19 @@ body {
   font-size: 20px;
   position: absolute;
   color: rgb(255, 255, 255, 0.8);
-  top: 95px;
+  top: 140px;
   transform: translateY(-50%);
   padding-left: 8px;
   transition: all 0.3s ease-out;
 }
 
 .inputEmail {
-  margin-top: 30px !important;
+  margin-top: 70px !important;
 }
 
 .inputEmail:focus-within label,
 .inputEmail.active-input label {
-  top: 65px;
+  top: 100px;
   color: white;
   font-size: 22px;
   padding-left: 2px;
@@ -60,19 +64,19 @@ body {
   font-size: 20px;
   position: absolute;
   color: rgb(255, 255, 255, 0.8);
-  top: 159px;
+  top: 233px;
   transform: translateY(-50%);
   padding-left: 8px;
   transition: all 0.3s ease-out;
 }
 
 .inputSubject {
-  margin-top: 30px;
+  margin-top: 60px;
 }
 
 .inputSubject:focus-within label,
 .inputSubject.active-input label {
-  top: 130px;
+  top: 185px;
   color: white;
   font-size: 22px;
   padding-left: 2px;
@@ -82,19 +86,19 @@ body {
   font-size: 20px;
   position: absolute;
   color: rgb(255, 255, 255, 0.8);
-  top: 220px;
+  top: 320px;
   transform: translateY(-50%);
   padding-left: 8px;
   transition: all 0.3s ease;
 }
 
 .inputMessage {
-  margin-top: 30px;
+  margin-top: 70px;
 }
 
 .inputMessage:focus-within label,
 .inputMessage.active-input label {
-  top: 195px;
+  top: 295px;
   color: white;
   font-size: 22px;
   padding-left: 2px;
