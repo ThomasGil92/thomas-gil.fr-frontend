@@ -10,6 +10,8 @@ export const SITE_DATA = gql`
     description
     url
     github
+    missions
+    technos
     image{
        url
        public_id

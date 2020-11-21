@@ -81,17 +81,17 @@ const ProjectCard = ({ site }) => {
                                             <motion.button
                                                 style={{ backgroundColor: "#32373c", color: "white" }}
                                                 className="btn btn-white"
+                                                type="button"
                                                 data-dismiss="modal"
                                                 aria-label="Close"
                                             >
                                                 <motion.i
-                                                    whileTap={{ rotate: 90 }}
                                                     className="fas fa-times"
                                                 ></motion.i>
                                             </motion.button>
                                         </div>
                                         <div className="modal-body border-0">
-                                            <div className="row">
+                                            <div className="row text-white">
                                                 <div className="text-left col-6 mb-3">
                                                     <img
                                                         style={{ maxWidth: "300px", height: "300px" }}
@@ -103,7 +103,7 @@ const ProjectCard = ({ site }) => {
                                                     <p>{site.description}</p>
                                                 </div>
                                             </div>
-                                            <div className="row">
+                                            <div className="row text-white">
                                                 <div className="col-6">
                                                     <h3>Missions:</h3>
                                                     {/*  Todo // map on misions send by db? */}

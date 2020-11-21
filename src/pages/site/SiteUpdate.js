@@ -25,20 +25,24 @@ const SiteUpdate = () => {
             url: '',
             public_id: ''
         },
-        url:'',
-        github:''
+        url: '',
+        missions: '',
+        technos: '',
+        github: ''
     })
     const [updatedValues, setUpdatedValues] = useState({
         title: '',
         description: '',
+        missions: '',
+        technos: {},
         image: {
             url: '',
             public_id: ''
         },
-        url:'',
-        github:''
+        url: '',
+        github: ''
     })
-    const { title, description, image,url,github } = updatedValues
+    const { title, description, image, url, github, missions, technos } = updatedValues
     const { siteid } = useParams()
 
     useEffect(() => {
@@ -54,9 +58,11 @@ const SiteUpdate = () => {
                 _id: singleSite.singleSite._id,
                 title: singleSite.singleSite.title,
                 description: singleSite.singleSite.description,
-                image: omitDeep(singleSite.singleSite.image, ['__typename']) ,
-                url:singleSite.singleSite.url,
-                github:singleSite.singleSite.github
+                image: omitDeep(singleSite.singleSite.image, ['__typename']),
+                url: singleSite.singleSite.url,
+                github: singleSite.singleSite.github,
+                missions: singleSite.singleSite.missions,
+                technos: singleSite.singleSite.technos
             })
             setUpdatedValues({
                 ...updatedValues,
@@ -64,13 +70,18 @@ const SiteUpdate = () => {
                 title: singleSite.singleSite.title,
                 description: singleSite.singleSite.description,
                 image: omitDeep(singleSite.singleSite.image, ['__typename']),
-                url:singleSite.singleSite.url,
-                github:singleSite.singleSite.github
+                url: singleSite.singleSite.url,
+                missions: singleSite.singleSite.missions,
+                technos: singleSite.singleSite.technos,
+                github: singleSite.singleSite.github
             })
         }
     }, [singleSite])
 
     const handleChange = (e) => {
+        if (e.target.name === "missions") {
+            setUpdatedValues({ ...updatedValues, [e.target.name]: [e.target.value] })
+        }
         setUpdatedValues({ ...updatedValues, [e.target.name]: e.target.value })
     }
 
@@ -94,6 +105,9 @@ const SiteUpdate = () => {
                         variables: {
                             input: {
                                 ...updatedValues,
+                                missions: {
+                                    ...missions
+                                },
                                 image: {
                                     url: response.data.url,
                                     public_id: response.data.public_id
@@ -110,7 +124,7 @@ const SiteUpdate = () => {
             console.log('prout')
             siteUpdate({
                 variables: {
-                    input:updatedValues 
+                    input: updatedValues
                 }
             })
         }
@@ -177,6 +191,30 @@ const SiteUpdate = () => {
                             value={github}
                             onChange={handleChange}
                             name="github"
+                            className="form-control"
+                            maxLength="150"
+                            disabled={loading}
+                        >
+                        </input>
+                    </div>
+                    <div className="form-group">
+                        <input
+                            type="text"
+                            value={missions}
+                            onChange={handleChange}
+                            name="missions"
+                            className="form-control"
+                            maxLength="150"
+                            disabled={loading}
+                        >
+                        </input>
+                    </div>
+                    <div className="form-group">
+                        <input
+                            type="text"
+                            value={technos}
+                            onChange={handleChange}
+                            name="technos"
                             className="form-control"
                             maxLength="150"
                             disabled={loading}
