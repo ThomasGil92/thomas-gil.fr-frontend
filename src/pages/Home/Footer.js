@@ -3,12 +3,13 @@ import ContactForm from '../../components/publicUser/ContactForm'
 import { motion } from 'framer-motion'
 
 const Footer = ({ language }) => {
-    const footerLink = (fa, link) => {
+    const footerLink = (fa, link,buttonName) => {
         return (
             <motion.a
             transition={{duration:0.3}}
-                whileHover={{ scale: 1.5, rotate: 360,backgroundColor:"rgb(0,0,0,0)",color:"#9DDBAD",borderColor:"#9DDBAD" }}
+                whileHover={{ scale: 1.5, rotate: 360,backgroundColor:"rgb(0,0,0,0)",color:"#63d471",borderColor:"#63d471" }}
                 target="_blank"
+                title={buttonName}
                 rel="noreferrer noopener"
                 className="btn btn-outline-light rounded-circle m-2 p-3"
                 href={link}>
@@ -22,7 +23,7 @@ const Footer = ({ language }) => {
 
     return (
         <div
-            id="bottom"
+            id="contact"
             className="row text-center mx-0 py-3 d-flex justify-content-between align-item-center"
             style={{
                 background: "#32373C"
@@ -35,9 +36,9 @@ const Footer = ({ language }) => {
 
             <div className="col-12 col-md-6 my-auto">
                 <div className="col align-items-center">
-                    {footerLink("fab fa-linkedin-in ", "https://www.linkedin.com/in/thomas-gil-react-developer/")}
-                    {footerLink("fas fa-user-tie ", "https://www.malt.fr/profile/thomasgil")}
-                    {footerLink("fab fa-github ", "https://github.com/ThomasGil92?tab=repositories")}
+                    {footerLink("fab fa-linkedin-in ", "https://www.linkedin.com/in/thomas-gil-react-developer/","Linkedin")}
+                    {footerLink("fas fa-user-tie ", "https://www.malt.fr/profile/thomasgil","Malt")}
+                    {footerLink("fab fa-github ", "https://github.com/ThomasGil92?tab=repositories","Github")}
                 </div>
                 <div className="col">
                     <a className="btn btn-outline-light mt-2" href={"/mentions-legales"}>{language === "fr" && "Mentions légales"}{language === "en" && "Legal notice"}</a>

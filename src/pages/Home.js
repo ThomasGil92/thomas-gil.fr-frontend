@@ -25,7 +25,6 @@ const Home = () => {
                 setLanguage={setLanguage}
             />
             <HomeIntro language={language} />
-
             <HomePresentation language={language} />
             <LastProjects language={language} />
             <Footer language={language} />

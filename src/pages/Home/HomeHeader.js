@@ -15,12 +15,12 @@ const HomeHeader = ({ language }) => {
                             className="test font-weight-bold mb-4 mt-2"
                         >Développeur Web Fullstack</motion.h1>
                         <motion.p
-                            initial={{ y: "100vw", opacity: 0 }}
+                            initial={{ y: "100vw", opacity: 0, overflow: "hidden" }}
                             animate={{ y: 0, opacity: 1 }}
                             transition={{ duration: 0.4, delay: 1.2 }}
-                            className="lead"
+                            className="lead text-center d-flex justify-content-center"
                         >
-                            React / Node
+                            React <motion.span initial={{display:"block", opacity: 0, y: 200 }} transition={{ delay: 2, duration: 1 }} animate={{ y: 0 ,opacity:1}} style={{ color: "#63d471" }}>/</motion.span> Node
                             </motion.p>
                     </div>
                 )}

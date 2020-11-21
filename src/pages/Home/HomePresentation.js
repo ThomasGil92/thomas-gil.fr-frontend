@@ -23,7 +23,7 @@ const HomePresentation = ({ language }) => {
         <section
             id="presentation"
             className="py-md-5 py-2 idClass"
-            style={{ marginTop: "100vh", backgroundColor: "#32373C" }}
+            style={{ backgroundColor: "#32373C" }}
         >
             <div
                 className="col-11 col-md-10 text-center mx-auto my-5 text-white"
@@ -31,8 +31,8 @@ const HomePresentation = ({ language }) => {
             >
                 <h1>Qui suis-je?</h1>
                 <div
-                    className="mx-auto bg-secondary"
-                    style={{ height: "3px", width: "100px" }}
+                    className="mx-auto"
+                    style={{ backgroundColor: "#63d471", height: "3px", width: "100px" }}
                 ></div>
                 <div className="mx-auto col-12 col-md-6 py-3">
                     <p className="text-center text-justify" style={{ fontWeight: "100" }}>
@@ -85,7 +85,7 @@ const HomePresentation = ({ language }) => {
               </p>
                         </motion.div>
                     </div>
-                    <div className="col-md-6 d-flex align-items-center">
+                    <div className="col-md-6">
                         <motion.div
                             ref={ref}
                             animate={controls}
@@ -100,7 +100,7 @@ const HomePresentation = ({ language }) => {
                                 stiffness: 300,
                                 damping: 20,
                             }}
-                            className="text-white text-left rounded col-12 px-4 py-3 my-md-5 mb-md-0"
+                            className="text-white text-left rounded col-12 px-4 py-3 mb-md-0"
                         >
                             <p className="lead mb-0">HTML5 / CSS3 / Javascript / Bootstrap</p>
                             <div className="progress">
@@ -110,12 +110,12 @@ const HomePresentation = ({ language }) => {
                                     aria-valuenow="85"
                                     aria-valuemin="0"
                                     aria-valuemax="100"
-                                    style={{ width: "85%", backgroundColor: "#1B9DB7" }}
+                                    style={{ width: "85%", backgroundColor: "#63d471" }}
                                 >
                                     85%
                 </div>
                             </div>
-                            <p className="lead mb-0 mt-3">Redux / React.js / Next.js</p>
+                            <p className="lead mb-0 mt-3">React.js / Redux / Next.js</p>
                             <div className="progress">
                                 <div
                                     className="progress-bar progress-bar-striped text-dark text-right font-weight-bold pr-2 progress-bar-animated"
@@ -123,7 +123,7 @@ const HomePresentation = ({ language }) => {
                                     aria-valuenow="85"
                                     aria-valuemin="0"
                                     aria-valuemax="100"
-                                    style={{ width: "85%", backgroundColor: "#1B9DB7" }}
+                                    style={{ width: "85%", backgroundColor: "#63d471" }}
                                 >
                                     85%
                 </div>
@@ -136,7 +136,7 @@ const HomePresentation = ({ language }) => {
                                     aria-valuenow="50"
                                     aria-valuemin="0"
                                     aria-valuemax="100"
-                                    style={{ width: "50%", backgroundColor: "#1B9DB7" }}
+                                    style={{ width: "50%", backgroundColor: "#63d471" }}
                                 >
                                     50%
                 </div>
@@ -207,7 +207,7 @@ const HomePresentation = ({ language }) => {
                                     aria-valuenow="85"
                                     aria-valuemin="0"
                                     aria-valuemax="100"
-                                    style={{ width: "85%", backgroundColor: "#1B9DB7" }}
+                                    style={{ width: "85%", backgroundColor: "#63d471" }}
                                 >
                                     85%
                 </div>
@@ -220,7 +220,7 @@ const HomePresentation = ({ language }) => {
                                     aria-valuenow="85"
                                     aria-valuemin="0"
                                     aria-valuemax="100"
-                                    style={{ width: "85%", backgroundColor: "#1B9DB7" }}
+                                    style={{ width: "85%", backgroundColor: "#63d471" }}
                                 >
                                     85%
                 </div>
@@ -233,7 +233,7 @@ const HomePresentation = ({ language }) => {
                                     aria-valuenow="80"
                                     aria-valuemin="0"
                                     aria-valuemax="100"
-                                    style={{ width: "80%", backgroundColor: "#1B9DB7" }}
+                                    style={{ width: "80%", backgroundColor: "#63d471" }}
                                 >
                                     80%
                 </div>
@@ -246,7 +246,7 @@ const HomePresentation = ({ language }) => {
                                     aria-valuenow="70"
                                     aria-valuemin="0"
                                     aria-valuemax="100"
-                                    style={{ width: "70%", backgroundColor: "#1B9DB7" }}
+                                    style={{ width: "70%", backgroundColor: "#63d471" }}
                                 >
                                     70%
                 </div>

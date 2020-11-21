@@ -16,7 +16,6 @@ const HomeIntro = ({ language }) => {
                     transition={{ duration: 0.8, delay: 0.5 }}
                     className="text-center text-white d-flex align-items-center justify-content-center"
                     style={{
-                        position: "absolute",
                         top: "0",
                         backgroundImage: "url(/img/video-poster.jpg)",
                         backgroundRepeat: "no-repeat",
@@ -39,9 +38,8 @@ const HomeIntro = ({ language }) => {
                         transition={{ delay: 0, duration: 10, loop: Infinity }}
                         initial={{ backgroundSize: "100%" }}
                         animate={{ backgroundSize: "120%" }}
-                        className="text-center text-white d-flex align-items-center justify-content-center"
+                        className="text-center text-white d-flex align-items-center justify-content-center vh-100"
                         style={{
-                            position: "absolute",
                             top: "0",
                             backgroundImage: "url(/img/video-poster.jpg)",
                             backgroundRepeat: "no-repeat",
