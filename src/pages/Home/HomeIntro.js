@@ -69,6 +69,7 @@ const HomeIntro = ({ language }) => {
             {/* <a href='https://fr.freepik.com/vecteurs/lumiere'>Lumière vecteur créé par starline - fr.freepik.com</a> */}
             {/* <a href='https://fr.freepik.com/photos/fond'>Fond photo créé par Racool_studio - fr.freepik.com</a> */}
             {/* <a href='https://fr.freepik.com/vecteurs/fond'>Fond vecteur créé par Harryarts - fr.freepik.com</a> */}
+            {/* <a href='https://fr.freepik.com/photos/fond'>Fond photo créé par rawpixel.com - fr.freepik.com</a> */}
         </Fragment>
     )
 }

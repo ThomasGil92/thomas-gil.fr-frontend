@@ -5,7 +5,10 @@ const HomeHeader = ({ language }) => {
     <Fragment>
       <header className="mt-5 mt-md-0">
         {language === "fr" && (
-          <div id="homeHeader" className="text-center py-4 text-white">
+          <div
+            id="homeHeader"
+            className="text-center py-4 text-white"
+          >
             <motion.h1
               initial={{ y: "-100vw", opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}

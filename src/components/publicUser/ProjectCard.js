@@ -10,16 +10,26 @@ const ProjectCard = ({ site }) => {
     };
 
     /*  const CollapsedInfos = site => {
-           return (
-               
-           )
-       } */
+             return (
+                 
+             )
+         } */
     return (
         <Fragment>
             <motion.div
-                whileHover={{ scale: 1.2, backgroundColor: "rgb(255, 255, 255, 0.1)" }}
+                initial={{
+                    boxShadow: "25px 14px 29px 0px rgba(0, 0, 0, 0.35)",
+                    transform: "perspective(1500px) rotateY(-10deg) rotateX(-10deg) rotateZ(0deg)",
+                }}
+                whileHover={{
+                    boxShadow: "-25px 14px 29px 0px rgba(0, 0, 0, 0.35)",
+                    transform:
+                        "perspective(1500px) rotateY(10deg) rotateX(10deg) rotateZ(0deg)",
+                    backgroundColor: "rgb(255, 255, 255, 0.1)"
+                }}
                 onMouseEnter={() => setMoreInfo(true)}
                 onMouseLeave={() => setMoreInfo(false)}
+                transition={{ duration: 0.2 }}
                 id="projectCard"
                 className="card mb-3 mb-md-5 border-0 text-white w-100"
                 style={{ maxWidth: "300px", overflowY: "hidden" }}
@@ -55,14 +65,19 @@ const ProjectCard = ({ site }) => {
                                     /* onClick={(e) => handleProjectPopUp()} */
                                     whileHover={{ rotate: 90 }}
                                 >
-                                    <i className="fas fa-plus fa-3x" style={{ color: "#edeec0" }}> </i>
+                                    <i className="fas fa-plus fa-3x" style={{ color: "#edeec0" }}>
+                                        {" "}
+                                    </i>
                                 </motion.button>
                                 <button
                                     className=" btn font-weight-bold px-0 mx-0"
                                     style={{ color: "#edeec0" }}
                                     data-toggle="modal"
                                     data-target="#myModal"
-                                > D'infos</button>
+                                >
+                                    {" "}
+                  D'infos
+                </button>
                             </motion.div>
                             <div
                                 className="modal right fade w-100"
@@ -73,10 +88,7 @@ const ProjectCard = ({ site }) => {
                                 aria-hidden="true"
                             >
                                 <div className="modal-dialog">
-                                    <div
-                                        className="modal-content"
-
-                                    >
+                                    <div className="modal-content">
                                         <div className="modal-header bg-transparent border-0">
                                             <motion.button
                                                 style={{ backgroundColor: "#32373c", color: "white" }}
@@ -85,9 +97,7 @@ const ProjectCard = ({ site }) => {
                                                 data-dismiss="modal"
                                                 aria-label="Close"
                                             >
-                                                <motion.i
-                                                    className="fas fa-times"
-                                                ></motion.i>
+                                                <motion.i className="fas fa-times"></motion.i>
                                             </motion.button>
                                         </div>
                                         <div className="modal-body border-0">

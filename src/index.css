@@ -3,7 +3,7 @@ html {
   overflow-x: hidden;
 }
 body {
-  position:relative;
+  position: relative;
   box-sizing: border-box;
   margin: 0;
   /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -13,13 +13,14 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.active{
-  color:#63d471!important;
-  transform:scale(1.1)!important;
-  font-weight: bold!important;
+.active {
+  color: #63d471 !important;
+  transform: scale(1.1) !important;
+  font-weight: bold !important;
 }
-input,textarea{
-  cursor:text;
+input,
+textarea {
+  cursor: text;
 }
 /**FOOTER**/
 .inputAnim label {
@@ -27,8 +28,8 @@ input,textarea{
 }
 .inputAnim {
   width: 100%;
-  margin-left:50px;
-  margin-right:50px;
+  margin-left: 50px;
+  margin-right: 50px;
   border: none;
   border-bottom: 2px solid white;
   outline: none;
@@ -112,21 +113,21 @@ input,textarea{
   position: fixed;
   margin: auto;
   width: 50vw;
-  background-color:red;
+  background-color: red;
   height: 100%;
   transform: translate3d(0%, 0, 0);
 }
 
 .modal.right .modal-content {
   height: 100%;
-  background-color:#32373c;
+  background-color: #32373c;
   overflow-y: auto;
 }
-.modal-header{
-  background-color:#32373c;
+.modal-header {
+  background-color: #32373c;
 }
 .modal.right .modal-body {
-  background-color:#32373c;
+  background-color: #32373c;
   padding: 15px 15px 80px;
 }
 
@@ -200,7 +201,11 @@ a.text-warning:hover {
   background-color: rgb(48, 51, 44, 0.3);
   /* transition: all 200ms ease-in-out;
   transform:scale(1) */
+  /* transform: perspective(1500px) rotateY(-2deg) rotateX(25deg) rotateZ(0deg) !important; */
 }
+/* #projectCard:hover {
+  transform: perspective(1500px) rotateY(-2deg) rotateX(0deg) rotateZ(0deg) !important;
+} */
 #projets {
   height: 100%;
 
