@@ -30,7 +30,7 @@ const LastProjects = ({ language }) => {
 
     return (
         <Fragment>
-            <div id="projets" style={{ backgroundImage: "url(https://thomas-gil.fr/img/paral-big.jpg)" }}>
+            <div id="projets" style={{ backgroundImage: "url(https://www.thomas-gil.fr/img/paral-big.jpg)" }}>
 
                 {window.innerWidth > 960 && (<>
                     <div className="p-3 pt-md-5 text-white text-center">
