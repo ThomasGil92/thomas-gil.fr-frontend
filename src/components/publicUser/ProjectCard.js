@@ -9,11 +9,19 @@ const ProjectCard = ({ site }) => {
         setCollapsedProjectInfos(false);
     };
 
-    /*  const CollapsedInfos = site => {
-             return (
-                 
-             )
-         } */
+    const stringsRenderer = (strings) => {
+        return strings
+            .toString()
+            .split(",")
+            .map((string, i) => {
+                return (
+                    <li key={i} className=" list-item m-0">
+                        {string.trim().charAt(0).toUpperCase() + string.trim().slice(1)}
+                    </li>
+                );
+            });
+    };
+
     return (
         <Fragment>
             <motion.div
@@ -116,10 +124,14 @@ const ProjectCard = ({ site }) => {
                                             <div className="row text-white">
                                                 <div className="col-6">
                                                     <h3>Missions:</h3>
+
+                                                    <ul>{site.missions.length > 0 && stringsRenderer(site.missions)}</ul>
+
                                                     {/*  Todo // map on misions send by db? */}
                                                 </div>
                                                 <div className="col-6">
                                                     <h3>Technos utilisées:</h3>
+                                                    <ul>{site.technos.length > 0 && stringsRenderer(site.technos)}</ul>
                                                 </div>
                                             </div>
                                         </div>
@@ -138,6 +150,7 @@ const ProjectCard = ({ site }) => {
                                                             borderBottomLeftRadius: ".25rem",
                                                             backgroundColor: "rgb(48,51,44,1)",
                                                         }}
+                                                        title="Lien du site"
                                                         href={site.url}
                                                     >
                                                         <span>Visiter le site</span>
@@ -148,15 +161,15 @@ const ProjectCard = ({ site }) => {
                                                         title="Github Repository"
                                                         target="_blank"
                                                         rel="noopener noreferrer"
-                                                        className="btn btn-outline-warning text-warning w-100 py-4"
+                                                        className="btn btn-outline-warning2 w-100 h-100 py-4 d-inline-block d-flex align-items-center justify-content-center"
                                                         style={{
                                                             borderRadius: "0",
                                                             borderBottomRightRadius: ".25rem",
                                                         }}
                                                         href={site.github}
                                                     >
-                                                        Voir le code sur Github
-                          </a>
+                                                        <span>Voir le code sur Github</span>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>

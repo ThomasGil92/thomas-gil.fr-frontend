@@ -9,12 +9,14 @@ import FileUpload from '../../components/admin/FileUpload'
 import axios from 'axios'
 
 const initialState = {
-    title: 'Titre à titre d*exemple',
-    description: 'Exemple de description d un projet en cours de développement',
+    title: '',
+    description: '',
     image: {
         url: "",
         public_id: ''
-    }
+    },
+    missions:[],
+    technos:[]
 }
 
 const Site = () => {
@@ -23,7 +25,7 @@ const Site = () => {
     const [values, setValues] = useState(initialState)
     const [loading, setLoading] = useState(false)
 
-    const { title, description, image, url, github } = values
+    const { title, description, image, url, github,missions,technos } = values
 
     const [siteCreate] = useMutation(SITE_CREATE, {
 
@@ -68,6 +70,8 @@ const Site = () => {
                         input: {
                             title,
                             description,
+                            missions,
+                            technos,
                             image: {
                                 url: response.data.url,
                                 public_id: response.data.public_id
@@ -145,6 +149,34 @@ const Site = () => {
                     name="github"
                     className="form-control"
                     placeholder="Nom du repertoire Github"
+                    maxLength="150"
+                    disabled={loading}
+                >
+                </input>
+            </div>
+
+            <div className="form-group">
+                <input
+                    type="text"
+                    value={missions}
+                    onChange={handleChange}
+                    name="missions"
+                    className="form-control"
+                    placeholder="Liste de missions"
+                    maxLength="150"
+                    disabled={loading}
+                >
+                </input>
+            </div>
+
+            <div className="form-group">
+                <input
+                    type="text"
+                    value={technos}
+                    onChange={handleChange}
+                    name="technos"
+                    className="form-control"
+                    placeholder="Liste des technos"
                     maxLength="150"
                     disabled={loading}
                 >

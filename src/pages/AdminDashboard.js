@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { useQuery } from '@apollo/react-hooks'
 import { GET_ALL_SITES } from '../graphql/queries'
 import { Link } from 'react-router-dom'

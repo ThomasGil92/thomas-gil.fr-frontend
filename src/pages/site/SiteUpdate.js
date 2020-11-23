@@ -26,15 +26,15 @@ const SiteUpdate = () => {
             public_id: ''
         },
         url: '',
-        missions: '',
-        technos: '',
+        missions:[],
+        technos:[],
         github: ''
     })
     const [updatedValues, setUpdatedValues] = useState({
         title: '',
         description: '',
-        missions: '',
-        technos: {},
+        missions:[],
+        technos: [],
         image: {
             url: '',
             public_id: ''
@@ -48,6 +48,7 @@ const SiteUpdate = () => {
     useEffect(() => {
         console.log(siteid)
         getSingleSite({ variables: { siteId: siteid } })
+        
     }, [])
 
     useMemo(() => {
@@ -79,10 +80,7 @@ const SiteUpdate = () => {
     }, [singleSite])
 
     const handleChange = (e) => {
-        if (e.target.name === "missions") {
-            setUpdatedValues({ ...updatedValues, [e.target.name]: [e.target.value] })
-        }
-        setUpdatedValues({ ...updatedValues, [e.target.name]: e.target.value })
+        setUpdatedValues({ ...updatedValues, [e.target.name]: [e.target.value] })
     }
 
     const handleSubmit = async (e) => {
@@ -105,9 +103,6 @@ const SiteUpdate = () => {
                         variables: {
                             input: {
                                 ...updatedValues,
-                                missions: {
-                                    ...missions
-                                },
                                 image: {
                                     url: response.data.url,
                                     public_id: response.data.public_id

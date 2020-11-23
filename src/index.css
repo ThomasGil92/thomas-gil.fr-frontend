@@ -163,8 +163,8 @@ a.btn-outline-info {
   margin: auto;
   background: linear-gradient(
     to right,
-    rgb(54, 162, 235) 50%,
-    rgb(48, 51, 44, 1) 50%
+    #1b9db7 50%,
+    #32373c 50%
   );
   background-size: 200% 100%;
   background-position: right bottom;
@@ -176,21 +176,23 @@ a.btn-outline-info:hover {
   background-position: left bottom;
   background-color: rgb(0, 0, 0, 1);
 }
-a.text-warning {
+a.btn-outline-warning2 {
+  color:#63d471!important;
   background: linear-gradient(
     to right,
-    rgb(237, 252, 36) 50%,
-    rgb(48, 51, 44, 1) 50%
+    #63d471 50%,
+   #32373c 50%
   );
-  background-size: 200% 100%;
+  background-size: 201% 100%;
   background-position: right bottom;
+  border-color:#63d471!important;
   transition: all 0.2s ease-out;
 }
-a.text-warning:hover {
+a.btn-outline-warning2:hover {
   color: rgb(48, 51, 44, 1) !important;
   font-weight: 700;
-  background-position: left bottom;
-  background-color: rgb(0, 0, 0, 0);
+  border-color:#63d471;
+  background-position: 0% 100%;
 }
 #projectCard::after {
   visibility: hidden;
