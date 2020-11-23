@@ -79,7 +79,7 @@ const HomePresentation = ({ language }) => {
                 votre projet, et maintenir un code structuré en toutes sécurité.
               </p>
                             <p style={{ fontWeight: "200" }} className="justify">
-                                L'éxperience de l'utilisateur est pour moi un objectif
+                                L'experience de l'utilisateur est pour moi un objectif
                                 primordiale, pour cela, je m'adapte à toutes les tailles
                                 d'écrans (Smartphones, tablettes et ordinateurs).
               </p>

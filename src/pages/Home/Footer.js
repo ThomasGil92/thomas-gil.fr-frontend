@@ -42,7 +42,7 @@ const Footer = ({ language }) => {
                     {footerLink("fab fa-github ", "https://github.com/ThomasGil92?tab=repositories", "Github")}
                 </div>
                 <div className="col">
-                    <a className="btn btn-outline-light mt-2" href={"/mentions-legales"}>{language === "fr" && "Mentions légales"}{language === "en" && "Legal notice"}</a>
+                    <a className="btn btn-outline-light m-4" href={"/mentions-legales"}>Mentions légales</a>
                 </div>
             </div>
 

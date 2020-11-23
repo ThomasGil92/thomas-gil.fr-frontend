@@ -124,14 +124,16 @@ const ProjectCard = ({ site }) => {
                                             <div className="row text-white">
                                                 <div className="col-6">
                                                     <h3>Missions:</h3>
-
-                                                    <ul>{site.missions.length > 0 && stringsRenderer(site.missions)}</ul>
-
-                                                    {/*  Todo // map on misions send by db? */}
-                                                </div>
+                                                    <div style={{ height: "165px", overflowY: "auto" }}>
+                                                        <ul>{site.missions.length > 0 && stringsRenderer(site.missions)}</ul>
+                                                    </div>
+                                                   </div>
                                                 <div className="col-6">
                                                     <h3>Technos utilisées:</h3>
-                                                    <ul>{site.technos.length > 0 && stringsRenderer(site.technos)}</ul>
+                                                    <div style={{ height: "165px", overflowY: "auto" }}>
+                                                        <ul>{site.technos.length > 0 && stringsRenderer(site.technos)}</ul>
+                                                    </div>
+
                                                 </div>
                                             </div>
                                         </div>
