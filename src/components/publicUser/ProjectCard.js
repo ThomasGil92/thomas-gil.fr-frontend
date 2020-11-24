@@ -1,13 +1,16 @@
 import React, { useState, Fragment } from "react";
 import { motion } from "framer-motion";
 
-const ProjectCard = ({ site }) => {
+const ProjectCard = ({ site, i }) => {
     const [moreInfo, setMoreInfo] = useState(false);
-    const [collapsedProjectInfos, setCollapsedProjectInfos] = useState(true);
-
-    const handleProjectPopUp = (e) => {
-        setCollapsedProjectInfos(false);
-    };
+    const [toggleMissions, setToggleMissions] = useState({
+        toggled: true,
+        id: "",
+    });
+    const [toggleTechnos, setToggleTechnos] = useState({
+        toggled: true,
+        id: "",
+    });
 
     const stringsRenderer = (strings) => {
         return strings
@@ -22,24 +25,56 @@ const ProjectCard = ({ site }) => {
             });
     };
 
+    const handleToggleMissions = (i) => (e) => {
+        e.preventDefault();
+        if (toggleMissions.toggled) {
+            setToggleMissions({
+                toggleMissionsd: false,
+                id: i,
+            });
+        } else {
+            setToggleMissions({
+                toggled: true,
+                id: "x",
+            });
+        }
+    };
+    const handleToggleTechnos = (i) => (e) => {
+        e.preventDefault();
+        if (toggleTechnos.toggled) {
+            setToggleTechnos({
+                toggled: false,
+                id: i,
+            });
+        } else {
+            setToggleTechnos({
+                toggled: true,
+                id: "x",
+            });
+        }
+    };
+
     return (
         <Fragment>
             <motion.div
                 initial={{
                     boxShadow: "25px 14px 29px 0px rgba(0, 0, 0, 0.35)",
-                    transform: "perspective(1500px) rotateY(-10deg) rotateX(-10deg) rotateZ(0deg)",
+                    transform:
+                        window.innerWidth > 960 &&
+                        "perspective(1500px) rotateY(-10deg) rotateX(-10deg) rotateZ(0deg)",
                 }}
                 whileHover={{
                     boxShadow: "-25px 14px 29px 0px rgba(0, 0, 0, 0.35)",
                     transform:
+                        window.innerWidth > 960 &&
                         "perspective(1500px) rotateY(10deg) rotateX(10deg) rotateZ(0deg)",
-                    backgroundColor: "rgb(255, 255, 255, 0.1)"
+                    backgroundColor: "rgb(255, 255, 255, 0.1)",
                 }}
                 onMouseEnter={() => setMoreInfo(true)}
                 onMouseLeave={() => setMoreInfo(false)}
                 transition={{ duration: 0.2 }}
                 id="projectCard"
-                className="card mb-3 mb-md-5 border-0 text-white w-100"
+                className="card  my-5 border-0 text-white w-100 mx-auto text-center"
                 style={{ maxWidth: "300px", overflowY: "hidden" }}
             >
                 <div>
@@ -125,15 +160,20 @@ const ProjectCard = ({ site }) => {
                                                 <div className="col-6">
                                                     <h3>Missions:</h3>
                                                     <div style={{ height: "165px", overflowY: "auto" }}>
-                                                        <ul>{site.missions.length > 0 && stringsRenderer(site.missions)}</ul>
+                                                        <ul>
+                                                            {site.missions.length > 0 &&
+                                                                stringsRenderer(site.missions)}
+                                                        </ul>
                                                     </div>
-                                                   </div>
+                                                </div>
                                                 <div className="col-6">
                                                     <h3>Technos utilisées:</h3>
                                                     <div style={{ height: "165px", overflowY: "auto" }}>
-                                                        <ul>{site.technos.length > 0 && stringsRenderer(site.technos)}</ul>
+                                                        <ul>
+                                                            {site.technos.length > 0 &&
+                                                                stringsRenderer(site.technos)}
+                                                        </ul>
                                                     </div>
-
                                                 </div>
                                             </div>
                                         </div>
@@ -182,7 +222,10 @@ const ProjectCard = ({ site }) => {
                     )}
                 </div>
                 <div
-                    style={{ maxHeight: "300px", width: "300px" }}
+                    style={{
+                        maxHeight: window.innerWidth < 960 ? "" : "300px",
+                        width: "300px",
+                    }}
                     className="d-flex align-items-center"
                 >
                     {window.innerWidth < 960 && (
@@ -193,11 +236,112 @@ const ProjectCard = ({ site }) => {
                                 </div>
                                 <div className="row mt-3 text-left mb-5">
                                     <div className="col-12">
-                                        <h5>Missions:</h5>
+                                        <button
+                                            type="button"
+                                            className="btn btn-block text-white text-left"
+                                            onClick={handleToggleMissions(i)}
+                                        >
+                                            <h5 className="mb-0">
+                                                Missions{" "}
+                                                {site.missions.length !== 0 && (
+                                                    <motion.div
+                                                        className="d-inline-block"
+                                                        animate={{
+                                                            rotate: !toggleMissions.toggled ? 180 : 0,
+                                                        }}
+                                                        transition={{ duration: 0.2 }}
+                                                    >
+                                                        <i className="far fa-caret-square-down"></i>
+                                                    </motion.div>
+                                                )}
+
+                                            </h5>
+                                        </button>
+                                        {!toggleMissions.toggled && toggleMissions.id === i && (
+                                            <motion.div
+                                                initial={{ scale: 0 }}
+                                                animate={{ scale: 1 }}
+                                                transition={{ duration: 0.2 }}
+                                                id={`${i}`}
+                                                style={{ height: "auto" }}
+                                            >
+                                                <ul>
+                                                    {site.missions.length > 0 &&
+                                                        stringsRenderer(site.missions)}
+                                                </ul>
+                                            </motion.div>
+                                        )}
+                                        {toggleMissions.toggled && toggleMissions.id === "x" && (
+                                            <motion.div
+                                                initial={{ scale: 1 }}
+                                                animate={{ scale: 0, height: 0 }}
+                                                transition={{ duration: 0.2 }}
+                                                id={`${i}`}
+                                                style={{ height: "auto" }}
+                                            >
+                                                <ul>
+                                                    {site.missions.length > 0 &&
+                                                        stringsRenderer(site.missions)}
+                                                </ul>
+                                            </motion.div>
+                                        )}
+                                        {(toggleMissions.toggled && toggleMissions.id !== "x") ||
+                                            (toggleMissions !== "" && <div></div>)}
+
                                         {/*  Todo // map on misions send by db? */}
                                     </div>
-                                    <div className="col-12">
-                                        <h5>Technos utilisées:</h5>
+                                    <div className="col-12 text-left">
+                                        <button
+                                            type="button"
+                                            className="btn btn-block text-white text-left"
+                                            onClick={handleToggleTechnos(i)}
+                                        >
+                                            <h5 className="mb-0">
+                                                Technos utilisées{" "}
+                                                {site.missions.length !== 0 && (
+                                                    <motion.div
+                                                        className="d-inline-block"
+                                                        animate={{
+                                                            rotate: !toggleTechnos.toggled ? 180 : 0,
+                                                        }}
+                                                        transition={{ duration: 0.2 }}
+                                                    >
+                                                        <i className="far fa-caret-square-down"></i>
+                                                    </motion.div>
+                                                )}
+
+                                            </h5>
+                                        </button>
+                                        {!toggleTechnos.toggled && toggleTechnos.id === i && (
+                                            <motion.div
+                                                initial={{ scale: 0 }}
+                                                animate={{ scale: 1 }}
+                                                transition={{ duration: 0.2 }}
+                                                id={`${i}`}
+                                                style={{ height: "auto" }}
+                                            >
+                                                <ul>
+                                                    {site.technos.length > 0 &&
+                                                        stringsRenderer(site.technos)}
+                                                </ul>
+                                            </motion.div>
+                                        )}
+                                        {toggleTechnos.toggled && toggleTechnos.id === "x" && (
+                                            <motion.div
+                                                initial={{ scale: 1 }}
+                                                animate={{ scale: 0, height: 0 }}
+                                                transition={{ duration: 0.2 }}
+                                                id={`${i}`}
+                                                style={{ height: "auto" }}
+                                            >
+                                                <ul>
+                                                    {site.technos.length > 0 &&
+                                                        stringsRenderer(site.technos)}
+                                                </ul>
+                                            </motion.div>
+                                        )}
+                                        {(toggleTechnos.toggled && toggleTechnos.id !== "x") ||
+                                            (toggleTechnos !== "" && <div></div>)}
                                     </div>
                                 </div>
                                 <div

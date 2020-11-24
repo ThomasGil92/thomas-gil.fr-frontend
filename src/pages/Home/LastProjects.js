@@ -72,7 +72,7 @@ const LastProjects = ({ language }) => {
                 {window.innerWidth < 960 && (
                     <div className=" d-lg-block p-0 pb-md-3 p-lg-5">
                         <Swiper
-                            spaceBetween={0}
+                            spaceBetween={60}
                             slidesPerView={1}
                             navigation
                             /*pagination={{ clickable: true }} 
@@ -84,7 +84,7 @@ const LastProjects = ({ language }) => {
                                 sites && sites.allSites.map((site, i) => {
                                     return (
                                         <SwiperSlide key={i} className="text-center px-md-5">
-                                            <ProjectCard site={site} />
+                                            <ProjectCard site={site} i={i} />
                                         </SwiperSlide>
 
                                     )

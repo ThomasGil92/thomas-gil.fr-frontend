@@ -43,9 +43,11 @@ const PublicNav = ({ language, setLanguage }) => {
     };
 
     return (
-        <motion.div
-            id="scaleNav"
-            initial={{ top: -150 }}
+        
+            <motion.nav
+                id="top"
+                className="navbar fixed-top navbar-expand-lg navbar-dark m-md-0 text-monospace py-0"
+                 initial={{ top: -150 }}
             animate={{ top: 0 }}
             transition={{
                 duration: 1.2,
@@ -53,19 +55,11 @@ const PublicNav = ({ language, setLanguage }) => {
                 type: "spring",
                 stiffness: "300",
             }}
-            className={"w-100 fixed-top d-flex justify-content-center"}
             style={{
                 backgroundColor: homeNavBgColor,
                 zIndex: "10",
                 transition: " background-color 0.5s ease",
             }}
-        >
-            <nav
-                id="top"
-                className="navbar navbar-expand-lg navbar-dark m-md-0 text-monospace py-0"
-                style={{
-                    width: "80%",
-                }}
             >
                 <Link className="navbar-brand px-0" to={"/"}>
                     <motion.h1
@@ -83,8 +77,8 @@ const PublicNav = ({ language, setLanguage }) => {
                     className="navbar-toggler ml-auto"
                     type="button"
                     data-toggle="collapse"
-                    data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent"
+                    data-target="#fixed-navbar"
+                    aria-controls="fixed-navbar"
                     aria-expanded="false"
                     aria-label="Toggle navigation"
                 >
@@ -124,8 +118,7 @@ const PublicNav = ({ language, setLanguage }) => {
                         </li>
                     </ul>
                 </div>
-            </nav>
-        </motion.div>
+            </motion.nav>
     );
 };
 
