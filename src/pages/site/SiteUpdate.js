@@ -77,7 +77,7 @@ const SiteUpdate = () => {
                 github: singleSite.singleSite.github
             })
         }
-    }, [singleSite])
+    }, [updatedValues,values,singleSite,getSingleSite])
 
     const handleChange = (e) => {
         setUpdatedValues({ ...updatedValues, [e.target.name]: [e.target.value] })

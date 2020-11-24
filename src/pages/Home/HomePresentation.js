@@ -80,7 +80,7 @@ const HomePresentation = ({ language }) => {
               </p>
                             <p style={{ fontWeight: "200" }} className="justify">
                                 L'experience de l'utilisateur est pour moi un objectif
-                                primordiale, pour cela, je produit votre site pour toutes les tailles
+                                primordiale, je produis votre site pour toutes les tailles
                                 d'écrans (Smartphones, tablettes et ordinateurs).
               </p>
                         </motion.div>
