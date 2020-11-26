@@ -67,10 +67,10 @@ const Footer = ({ language }) => {
           </a>
           <a className="btn btn-outline-light m-4" target="_blank" rel="noreferrer noopener" href={"/CVtoShare"}>
             Voir mon CV <i className="far fa-eye "></i>
-          </a>
+          </a>{/* 
           <a className="btn btn-outline-light m-4" download href={"/img/CV-Thomas-Gil-Dev-React-Node.pdf"}>
             Télécharger mon CV <i className="fas fa-download"></i>
-          </a>
+          </a> */}
         </div>
       </div>
     </div>
