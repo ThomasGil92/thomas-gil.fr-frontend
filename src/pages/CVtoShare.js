@@ -1,13 +1,30 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const CVtoShare = () => {
+  const returnButton = () => {
+    return (
+      <div className="position-absolute" style={{ top: "20px", left: "20px" }}>
+        <Link
+          className="btn btn-link text-white position-absolute"
+          style={{ zIndex: "500000" }}
+          to={"/"}
+        >
+          Retour
+        </Link>
+      </div>
+    );
+  };
+
   return (
     <div className="container-fluid py-0">
       <div
         className="row py-3 px-0 mx-0 w-100 position-absolute bg-dark"
         style={{ top: "0", left: "0" }}
       >
-        <div className="card-title col-12 text-center text-white ounded px-0">
+        <div className="card-title col-12 text-center text-white rounded px-0">
+          {returnButton()}
           <h1 className="mb-0">Thomas Gil-Escriche</h1>
           <h1 className="lead">Développeur web Fullstack React et Node</h1>
         </div>
@@ -199,7 +216,8 @@ const CVtoShare = () => {
                     -Créer un serveur Express.js.
                   </li>
                   <li className="list-group-item border-0 py-1 bg-light">
-                    -Enregistrer et authentifier les utilisateurs avec AWS IAM et SES.
+                    -Enregistrer et authentifier les utilisateurs avec AWS IAM
+                    et SES.
                   </li>
                   <li className="list-group-item border-0 py-1 bg-light">
                     -Upload d'images avec AWS S3.
