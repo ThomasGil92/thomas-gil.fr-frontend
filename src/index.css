@@ -314,9 +314,7 @@ a.btn-outline-warning2:hover {
     }
   }
   @media screen and (min-width: 960px) {
-    #contact-form-to-hide-in-lg {
-      visibility: hidden;
-    }
+    
     #CVParallax {
       height: 100%;
 

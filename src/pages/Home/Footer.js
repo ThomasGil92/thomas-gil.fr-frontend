@@ -36,14 +36,12 @@ const Footer = ({ language }) => {
         background: "#32373C",
       }}
     >
-      <div className="col-12 col-md-6 text-left p-3 px-md-5 py-md-0 d-block d-md-none">
-        <ContactForm language={language} />
-      </div>
+      
 
-      <div className="col-12 col-md-8 mx-auto text-left d-none d-md-block px-0">
+      <div className="col-12 col-md-8 mx-auto text-left px-md-0">
         <ContactForm language={language} />
       </div>
-      <div className="col-12 mt-md-5 mx-auto col-md-6 my-auto">
+      <div className="col-12 mt-5 mx-auto col-md-6 my-auto">
         <div className="col align-items-center">
           {footerLink(
             "fab fa-linkedin-in ",
@@ -61,17 +59,32 @@ const Footer = ({ language }) => {
             "Github",
           )}
         </div>
-        <div className="col">
-          <a className="btn btn-outline-light m-4" href={"/mentions-legales"}>
+        {window.innerWidth >960 &&(
+          <div className="col">
+          <a className="btn btn-outline-light m-md-4" href={"/mentions-legales"}>
             Mentions légales
           </a>
-          <a className="btn btn-outline-light m-4" target="_blank" rel="noreferrer noopener" href={"/CVtoShare"}>
+          <a className="btn btn-outline-light m-md-4" target="_blank" rel="noreferrer noopener" href={"/CVtoShare"}>
             Voir mon CV <i className="far fa-eye "></i>
-          </a>{/* 
-          <a className="btn btn-outline-light m-4" download href={"/img/CV-Thomas-Gil-Dev-React-Node.pdf"}>
+          </a>
+          <a className="btn btn-outline-light m-4" download href={"/img/React_Node_Thomas_Gil.pdf"}>
             Télécharger mon CV <i className="fas fa-download"></i>
-          </a> */}
+          </a>
         </div>
+        )}
+        {window.innerWidth <=960 &&(
+          <div className="col">
+          <a className="btn btn-outline-light mt-4 mb-3 w-100" href={"/mentions-legales"}>
+            Mentions légales
+          </a>
+          <a className="btn btn-outline-light w-100 mb-3" target="_blank" rel="noreferrer noopener" href={"/CVtoShare"}>
+            Voir mon CV <i className="far fa-eye "></i>
+          </a>
+          <a className="btn btn-outline-light w-100" download href={"/img/React_Node_Thomas_Gil.pdf"}>
+            Télécharger mon CV <i className="fas fa-download"></i>
+          </a>
+        </div>
+        )}
       </div>
     </div>
   );
