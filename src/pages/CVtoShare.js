@@ -393,6 +393,19 @@ const CVtoShare = () => {
                   </div>
                 </li>
                 <li className="list-group-item bg-light px-3">
+                  <span>Next.js</span>
+                  <div className="progress">
+                    <div
+                      className="progress-bar progress-bar-striped progress-bar-animated"
+                      role="progressbar"
+                      aria-valuenow="70"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style={{ width: "70%" }}
+                    ></div>
+                  </div>
+                </li>
+                <li className="list-group-item bg-light px-3">
                   <span>API Restful</span>
                   <div className="progress">
                     <div
