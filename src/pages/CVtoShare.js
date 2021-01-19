@@ -42,7 +42,7 @@ const CVtoShare = () => {
             </div>
             <div className="col-12 col-md-6">
               <p>
-                <i className="fab fa-github-square"></i> ThomasGil92
+                <i className="fab fa-github-square"></i> https://github.com/ThomasGil92
               </p>
             </div>
             <div className="col-12 col-md-6">
@@ -68,8 +68,32 @@ const CVtoShare = () => {
           <div className="row text-left mt-5">
             <div className="col-12 px-0 px-md-2">
               <h1 className="text-center py-md-4 w-100 bg-dark text-light rounded">
-                Expériences
+                Portfolio
               </h1>
+              <div className="text-justify bg-light rounded py-4 px-4 mb-3 border">
+                <div className="d-flex align-items-end">
+                  <h4>Novembre 2020 (projet en cours) /</h4>
+                  <h5> Développement d'un Ecommerce avec Next.js</h5>
+                </div>
+                <ul>
+                  <li className="df">
+                    Création d'une API Rest
+                  </li>
+                  <li className="df">
+                    Création d'une interface administrateur pour gérer les produits, les commandes et les catégories de produits
+                  </li>
+                  <li className="df">Authentification avec Tokens</li>
+                  <li className="df">Création du design</li>
+                  <li className="df">Gestion du state avec Redux hooks</li>
+                  <li className="df">Gestion de projet</li>
+                  <li className="df">Upload d'images avec Cloudinary</li>
+                </ul>
+
+                <p>
+                  <u>Technologies utilisées</u>: React, Node, Redux,
+                  Next.js, MongoDB,API Rest, Cloudinary, AWS (SES)
+                </p>
+              </div>
               <div className="text-justify bg-light rounded py-4 px-4 mb-3 border">
                 <div className="d-flex align-items-end">
                   <h4>Septembre-Octobre 2020 /</h4>
